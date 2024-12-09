@@ -5,52 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhaaniu Jain's Website</title>
     <style>
-        /* Dropdown Button */
-        .dropbtn {
-            background-color: #3498DB;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Dropdown button on hover & focus */
-        .dropbtn:hover, .dropbtn:focus {
-            background-color: #2980B9;
-        }
-
-        /* The container <div> - needed to position the dropdown content */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Dropdown Content (Hidden by Default) */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        /* Links inside the dropdown */
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {background-color: #ddd;}
-
-        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-        .show {display:block;}
-
-        /* Centering the page */
+        /* General Styling */
         body {
             display: flex;
             flex-direction: column;
@@ -58,36 +13,62 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
             background-color: #BEE3F8; /* Light blue background color */
         }
 
-        /* Styling for the About Me box */
+        h1 {
+            color: white; /* Welcome text color */
+        }
+
+        /* Styling for the button */
+        .projects-btn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 20px;
+        }
+
+        .projects-btn:hover {
+            background-color: #2980B9;
+        }
+
+        /* About Me Section */
         .about-me-box {
             background-color: #f1f1f1;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 600px;
-            margin: 20px;
             text-align: center;
+            margin: 20px;
         }
 
-        /* Styling for links container */
+        /* Links container */
         .links-container {
             margin-top: 20px;
         }
 
-        /* Styling for resume and contact links */
         .resume-link, .contact-link {
             margin-right: 10px;
+            text-decoration: none;
+            background-color: #3498DB;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
 
-        /* Styling for welcome text */
-        h1 {
-            color: white; /* Set welcome text color to white */
+        .resume-link:hover, .contact-link:hover {
+            background-color: #2980B9;
         }
 
-        /* Styling for the image */
+        /* Profile Image */
         .profile-img {
             max-width: 100%;
             height: auto;
@@ -98,14 +79,9 @@
 </head>
 <body>
     <h1>Welcome</h1>
-    <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Personal Projects</button>
-        <div id="myDropdown" class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-        </div>
-    </div>
+
+    <!-- Personal Projects Button -->
+    <button class="projects-btn" onclick="window.location.href='projects.html'">Personal Projects</button>
 
     <!-- Add the image here -->
     <img src="racoon-pedro.gif" alt="Profile Picture" class="profile-img">
@@ -118,30 +94,8 @@
 
     <!-- Links Container -->
     <div class="links-container">
-        <a href="Resume.html" class="resume-link" target="_blank">Resume</a>
-        <a href="Contact.html" class="contact-link">Contact Info</a>
+        <a href="resume.html" class="resume-link" target="_blank">Resume</a>
+        <a href="contact.html" class="contact-link">Contact Info</a>
     </div>
-
-    <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
 </body>
 </html>
