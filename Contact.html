@@ -5,24 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
     <style>
+        /* General Body Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
         }
 
         .container {
-            margin: 0 auto;
+            max-width: 700px;
+            margin: 50px auto;
             padding: 20px;
-        }
-
-        .contact-info {
-            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(8px);
         }
 
         .contact-info h2 {
             margin-top: 0;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #fff;
         }
 
         .contact-info ul {
@@ -31,37 +37,70 @@
         }
 
         .contact-info ul li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
         }
 
         .contact-info ul li strong {
             display: inline-block;
             width: 200px;
+            color: #f3f3f3;
+        }
+
+        .contact-info ul li a {
+            color: #ffdb58;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info ul li a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Social Links */
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
         }
 
         .social-links a {
             display: inline-block;
-            margin-right: 10px;
+            margin: 0 15px;
+            transition: transform 0.3s;
         }
 
         .social-links a img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Back Button */
         #backButton {
-            padding: 10px 20px;
-            background-color: #333;
+            display: block;
+            margin: 30px auto;
+            padding: 12px 30px;
+            background: #333;
             color: #fff;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
+            text-align: center;
+            font-size: 1rem;
             text-decoration: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.2s;
         }
 
         #backButton:hover {
-            background-color: #555;
+            background: #555;
+            transform: translateY(-3px);
         }
     </style>
 </head>
@@ -70,15 +109,17 @@
         <div class="contact-info">
             <h2>Contact Information</h2>
             <ul>
-                <li><strong>Personal Email:</strong> beepeejay03@gmail.com </li>
-                <li><strong>School Email:</strong> jainbhaa@msu.edu</li>
-                <li><strong>Phone Number:</strong> +1 (248) - 884 - 5708</li>
+                <li><strong>Personal Email:</strong> <a href="mailto:beepeejay03@gmail.com">beepeejay03@gmail.com</a></li>
+                <li><strong>School Email:</strong> <a href="mailto:jainbhaa@msu.edu">jainbhaa@msu.edu</a></li>
+                <li><strong>Phone Number:</strong> <a href="tel:+12488845708">+1 (248) 884 5708</a></li>
                 <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bhaaniu-jain" target="_blank">My LinkedIn Profile</a></li>
                 <li><strong>Instagram:</strong> <a href="https://www.instagram.com" target="_blank">My Instagram Profile</a></li>
-                <!-- Add any other contact info here -->
             </ul>
-		<br>
-		<br>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/bhaaniu-jain" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
+        </div>
         <a id="backButton" href="index.html">Back to Main Page</a>
     </div>
 </body>
